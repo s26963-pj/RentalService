@@ -22,7 +22,7 @@ public class RentalController {
         return ResponseEntity.ok(rentalService.getMovie(id));
     }
 
-    @PutMapping("/rent/movie/{id}")
+    @PutMapping("/return/movie/{id}")
     public ResponseEntity<Void> returnMovie(@PathVariable Long id){
         return ResponseEntity.status(HttpStatus.OK).build();
     }
