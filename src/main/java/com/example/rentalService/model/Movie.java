@@ -1,10 +1,16 @@
 package com.example.rentalService.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 public class Movie {
 
+    @Schema(name = "Movie ID", example = "1", nullable = false)
     private Long id;
+    @Schema(name = "Name of the movie", example = "Hobbit", nullable = false)
     private String name;
+    @Schema(name = "Category of the movie", example = "Horror", nullable = false)
     private String category;
+    @Schema(name = "Is available in store", example = "True", nullable = false)
     private Boolean is_available;
 
     public Movie(Long id, String name, String category, Boolean is_available) {
